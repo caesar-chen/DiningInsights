@@ -2,5 +2,5 @@
 /.vscode
 
 # Exclude Debug files
-/DiningInsights/obj/Debug/netcoreapp2.1
+/DiningInsights/obj
 /DiningInsights/bin/Debug/netcoreapp2.1
