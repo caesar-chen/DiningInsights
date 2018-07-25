@@ -1,5 +1,6 @@
 # Exclude VS Code .json files
 /.vscode
+/.vs
 
 # Exclude Debug files
 /DiningInsights/obj

@@ -1,0 +1,14 @@
+@page
+@model CreateModel
+@{
+    ViewData["Title"] = "Creat";
+}
+<h2>Add New Restaurant</h2>
+
+<h3>Enter info:</h3>
+
+<form method = "post">
+    <div>Name: <input asp-for="restaurant.Name" /></div>
+    <div></div>
+    <div><input type="submit"/></div>
+</form>

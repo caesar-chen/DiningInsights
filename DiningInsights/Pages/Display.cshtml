@@ -1,0 +1,31 @@
+@page
+@model DisplayModel
+@{
+    ViewData["Title"] = "Display";
+}
+<h2>Display</h2>
+
+<div>
+    <li><a href="search">Home</a></li>
+</div>
+
+<div>
+    <table class="table">
+        <thead>
+            Display restaurants
+        </thead>
+        <tbody>
+            @foreach (var restaurant in Model.Restaurants)
+            {
+                <tr>
+                <td>@restaurant.Name</td>
+                <td>@restaurant.FoodType</td>
+                <td>
+
+                </td>
+            </tr>
+            }
+        </tbody>
+    </table>    
+</div>
+
