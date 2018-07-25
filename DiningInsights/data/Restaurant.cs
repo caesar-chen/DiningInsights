@@ -6,19 +6,20 @@ namespace DiningInsights
     public class Restaurant
     {
         [Required, StringLength(100)]
+        [Key]
         public string Name { get; set; }
 
-        public List<Entree> Entrees { get; set; }
+        public string FoodType { get; set; }
+
+        public bool isFavorite { get; set; }
+
+        public bool isToEat { get; set; }
+
+        //public List<Entree> Entrees { get; set; }
 
         // Restaurant will be at different cafes, depends on current day of week.
-        public int[] Locations { get; set; }
+        //public int[] Locations { get; set; }
 
-        public Restaurant(string name, List<Entree> entrees, int[] locations)
-        {
-            this.Name = name;
-            this.Entrees = entrees;
-            this.Locations = locations;
-        }
         
     }
 

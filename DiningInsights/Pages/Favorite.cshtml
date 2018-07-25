@@ -1,0 +1,27 @@
+@page
+@model FavoriteModel
+@{
+    ViewData["Title"] = "MyFavorite";
+}
+<h2>MyFavorite</h2>
+
+<div>
+    <table class="table">
+        <thead>
+            MyFavorite Restaurants
+        </thead>
+        <tbody>
+            @foreach (var restaurant in Model.FavoriteList)
+            {
+                @if (restaurant.isFavorite)
+                {
+                    <tr>
+                        <td>@restaurant.Name</td>
+                        <td>@restaurant.FoodType</td>
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>    
+</div>
+

@@ -1,0 +1,40 @@
+@page
+@model DisplayModel
+@{
+    ViewData["Title"] = "Display";
+}
+<h2>Display</h2>
+
+<!-- <p>Enter info:</p>
+
+<form method = "post">
+    <div>Name: <input asp-for="restaurant.Name" /></div>
+    <input type="submit"/>
+</form> -->
+
+<div>
+    <li><a href="create">Home</a></li>
+    <li><a href="https://go.microsoft.com/fwlink/?LinkId=699315">Add to favorite</a></li>
+    <li><a href="https://go.microsoft.com/fwlink/?LinkId=699316">Add to To-eat</a></li>
+</div>
+
+<div>
+    <table class="table">
+        <thead>
+            Display restaurants
+        </thead>
+        <tbody>
+            @foreach (var restaurant in Model.Restaurants)
+            {
+                <tr>
+                <td>@restaurant.Name</td>
+                <td>@restaurant.FoodType</td>
+                <td>
+                    <!-- <a asp-page -->
+                </td>
+            </tr>
+            }
+        </tbody>
+    </table>    
+</div>
+

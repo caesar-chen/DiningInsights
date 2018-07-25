@@ -8,6 +8,7 @@ namespace DiningInsights
 
         public string Price { get; set; }
 
-        public DayOfWeek[] DaysOfWeekAvailable { get; set; }
+        // Bit map.
+        public int DaysOfWeekAvailable { get; set; }
     }
 }
