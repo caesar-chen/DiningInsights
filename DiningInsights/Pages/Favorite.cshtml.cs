@@ -24,5 +24,18 @@ namespace DiningInsights.Pages
         {
             FavoriteList = await _db.Restaurants.ToListAsync();
         }
+
+        public async Task<IActionResult> OnPostRemoveAsync(string name)
+        {
+            var currRes = await _db.Restaurants.FindAsync(name);
+
+            if (currRes != null)
+            {
+                currRes.isFavorite = false;
+                await _db.SaveChangesAsync();
+            }
+
+            return RedirectToPage();
+        }
     }
 }
