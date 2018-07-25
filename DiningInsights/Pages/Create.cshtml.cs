@@ -27,7 +27,7 @@ namespace DiningInsights.Pages
                 return Page();
             }
 
-            restaurant.FoodType = "bug";
+            restaurant.FoodType = "Others";
             restaurant.isFavorite = false;
             _db.Restaurants.Add(restaurant);
             await _db.SaveChangesAsync();
@@ -68,11 +68,6 @@ namespace DiningInsights.Pages
             await _db.SaveChangesAsync();
 
             return RedirectToPage("Display");
-        }
-
-        public void OnGet()
-        {
-
         }
     }
 }

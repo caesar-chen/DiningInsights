@@ -45,7 +45,6 @@ namespace DiningInsights.Pages
                 await _db.SaveChangesAsync();
             }
 
-            //return Page();
             return RedirectToPage();
         }
     }

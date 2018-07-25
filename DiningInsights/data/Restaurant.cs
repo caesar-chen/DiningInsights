@@ -19,8 +19,6 @@ namespace DiningInsights
 
         // Restaurant will be at different cafes, depends on current day of week.
         //public int[] Locations { get; set; }
-
-        
     }
 
     public enum DayOfWeek {Mon, Tue, Wed, Thu, Fri, Sat, Sun};

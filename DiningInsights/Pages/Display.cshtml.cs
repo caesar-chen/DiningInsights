@@ -24,17 +24,5 @@ namespace DiningInsights.Pages
         {
             Restaurants = await _db.Restaurants.ToListAsync();
         }
-
-        public async Task<IActionResult> OnPostDeleteAsync(int name)
-        {
-            var currRes = await _db.Restaurants.FindAsync(name);
-
-            if (currRes != null)
-            {
-                _db.Restaurants.Remove(currRes);
-                await _db.SaveChangesAsync();
-            }
-            return RedirectToPage();
-        }
     }
 }
