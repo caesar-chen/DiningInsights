@@ -33,6 +33,36 @@ namespace DiningInsights.Pages
             _db.Restaurants.Add(restaurant);
             await _db.SaveChangesAsync();
 
+            restaurant.Name = "Sea Stars";
+            restaurant.FoodType = "American";
+            restaurant.Cafe = Cafes.Cafe31;
+            _db.Restaurants.Add(restaurant);
+            await _db.SaveChangesAsync();
+
+            restaurant.Name = "ShanghaiShanghai";
+            restaurant.FoodType = "Chinese";
+            restaurant.Cafe = Cafes.Cafe86;
+            _db.Restaurants.Add(restaurant);
+            await _db.SaveChangesAsync();
+
+            restaurant.Name = "What The Pho!";
+            restaurant.FoodType = "Vietnamese";
+            restaurant.Cafe = Cafes.Cafe83;
+            _db.Restaurants.Add(restaurant);
+            await _db.SaveChangesAsync();
+
+            restaurant.Name = "Chianti Italian Restaurant";
+            restaurant.FoodType = "Italian";
+            restaurant.Cafe = Cafes.CafeX;
+            _db.Restaurants.Add(restaurant);
+            await _db.SaveChangesAsync();
+
+            restaurant.Name = "Mediterranean Grill";
+            restaurant.FoodType = "Mediterranean";
+            restaurant.Cafe = Cafes.CafeLS;
+            _db.Restaurants.Add(restaurant);
+            await _db.SaveChangesAsync();
+
             restaurant.Name = "Ding Tai Feng";
             restaurant.FoodType = "Chinese";
             restaurant.Cafe = Cafes.Cafe25;
