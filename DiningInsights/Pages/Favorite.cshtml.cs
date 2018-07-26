@@ -1,12 +1,8 @@
-using System;
 using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
-using DiningInsights;
 
 namespace DiningInsights.Pages
 {
@@ -24,6 +20,19 @@ namespace DiningInsights.Pages
         public async Task OnGetAsync()
         {
             FavoriteList = await _db.Restaurants.ToListAsync();
+        }
+
+        public async Task<IActionResult> OnPostRemoveAsync(string name)
+        {
+            var currRes = await _db.Restaurants.FindAsync(name);
+
+            if (currRes != null)
+            {
+                currRes.isFavorite = false;
+                await _db.SaveChangesAsync();
+            }
+
+            return RedirectToPage();
         }
     }
 }

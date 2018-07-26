@@ -13,7 +13,7 @@ namespace DiningInsights
 
         public bool isFavorite { get; set; }
 
-        public bool isToEat { get; set; }
+        public Cafes Cafe { get; set; }
 
         //public List<Entree> Entrees { get; set; }
 

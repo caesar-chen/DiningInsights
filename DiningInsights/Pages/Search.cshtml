@@ -1,0 +1,48 @@
+﻿@page
+@model SearchModel
+@{
+    ViewData["Title"] = "Search page";
+}
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="6000">
+
+    <div class="carousel-inner" role="listbox">
+        <div class="item active">
+            <img src="~/images/IMG_1.jpg" alt="ASP.NET" class="img-responsive" />
+            <div class="carousel-caption" role="option">
+                <p>
+                    <form>
+                        <p>
+                            <input type="text" name="searchString">
+                            <input type="submit" value="Search">
+                        </p>
+                    </form>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div>
+    <table class="table">
+        <thead>
+            Display restaurants
+        </thead>
+        <tbody>
+            @foreach (var curRes in Model.restaurant)
+            {
+                <tr>
+                <td>@curRes.Name</td>
+                <td>@curRes.FoodType</td>
+                <td>@curRes.Cafe</td>
+                <td>
+                    <form method = "post">
+                        <button type="submit" asp-page-handler="Update" asp-route-name="@curRes.Name">❤️</button>
+                    </form>
+                </td>
+            </tr>
+            }
+        </tbody>
+    </table>    
+</div>
